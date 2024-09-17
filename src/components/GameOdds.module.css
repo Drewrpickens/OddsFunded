@@ -1,0 +1,120 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e2333;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  margin-bottom: 10px;
+}
+
+.gameInfoContainer {
+  background-color: #2c3345;
+  border-radius: 8px;
+  padding: 10px;
+  width: 25%;
+}
+
+.teamsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
+
+.teamLogo {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+.teamName {
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.gameTime {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.liveIndicator {
+  background-color: #ff4d4f;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.7em;
+  margin-bottom: 5px;
+}
+
+.date, .time {
+  font-size: 0.8em;
+  color: #8a8d93;
+}
+
+.oddsSection {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 60%;
+}
+
+.oddsColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Slightly increased gap between boxes */
+}
+
+.oddBox {
+  background-color: #2c3345;
+  border-radius: 5px;
+  padding: 8px 15px; /* Increased padding left/right and slightly top/bottom */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center;
+  min-width: 90px; /* Slightly increased to accommodate more padding */
+  text-align: center; /* Ensure text is centered */
+}
+
+.spread, .price {
+  font-size: 0.9em;
+  margin: 0 3px; /* Add a little space between spread and price */
+}
+
+.morePicksButton {
+  background-color: #4a90e2; /* More blue color */
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9em;
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.morePicksButton:hover {
+  background-color: #3a7bc8; /* Darker blue on hover */
+}
+
+.buttonText {
+  margin-right: 5px;
+}
+
+.arrowIcon {
+  width: 16px;
+  height: 16px;
+  fill: white;
+}

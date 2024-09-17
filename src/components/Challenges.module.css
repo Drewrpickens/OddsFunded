@@ -1,0 +1,139 @@
+.challenges {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.challengeList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.challengeCard {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.challengeCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.accountSize {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4a5568;
+  margin-bottom: 1rem;
+}
+
+.challengeDetails {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.detailItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.detailLabel {
+  color: #718096;
+}
+
+.detailValue {
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.lossLimit {
+  color: #e53e3e;
+}
+
+.entryFee {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.entryFeeLabel {
+  color: #718096;
+}
+
+.entryFeeValue {
+  font-weight: 700;
+  color: #4a5568;
+}
+
+.rulesButton {
+  background-color: transparent;
+  border: 1px solid #4299e1;
+  color: #4299e1;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.rulesButton:hover {
+  background-color: #4299e1;
+  color: white;
+}
+
+.rules {
+  background-color: #f7fafc;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.rules h4 {
+  margin-top: 0;
+  color: #4a5568;
+}
+
+.rules ul {
+  padding-left: 1.5rem;
+  color: #718096;
+}
+
+.joinButton {
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.joinButton:hover {
+  background-color: #3182ce;
+}
+
+.confirmation {
+  margin-top: 2rem;
+  text-align: center;
+  background-color: #e6fffa;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}

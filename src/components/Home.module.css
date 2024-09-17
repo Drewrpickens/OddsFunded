@@ -1,0 +1,179 @@
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px; /* Add more padding for a better look */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100vh; /* Ensure container fills the entire height */
+}
+
+.leftContent {
+  flex: 1;
+  max-width: 50%;
+  padding-right: 40px;
+}
+
+.heroTitle {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 0px 0px 10px rgba(255,255,255,0.4);
+}
+
+.heroSubtitle {
+  font-size: 20px;
+  color: #94a3b8;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.discordBlock {
+  background-color: #111827;
+  border-radius: 8px;
+  padding: 20px;
+  display: inline-block;
+  max-width: 350px; /* Set a max-width to align with the screenshot */
+}
+
+.discordText {
+  color: #94a3b8;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.discordBtn {
+  background: linear-gradient(90deg, #3b82f6, #5865F2); /* Gradient */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0px 0px 10px rgba(59, 130, 246, 0.5); /* Add a glow */
+}
+
+.discordIcon {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.sidebar {
+  background-color: rgba(17, 24, 39, 0.9); /* more transparency */
+  padding: 40px; /* Increase padding for more space */
+  border-radius: 20px;
+  width: 400px; /* Adjust width to better match the screenshot */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* subtle shadow */
+}
+
+.challengeBadge {
+  background-color: #1e293b;
+  color: #94a3b8;
+  padding: 8px 12px; /* More padding for better visibility */
+  border-radius: 15px;
+  font-size: 12px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.progressBar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.progressBar::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #1e293b;
+  z-index: 0;
+}
+
+.progressStep {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  color: #94a3b8;
+  position: relative;
+  z-index: 1;
+}
+
+.progressStepActive {
+  background-color: #3b82f6;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.progressStepActive::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #3b82f6;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 8px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.formInput {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px; /* More rounded corners */
+  border: 1px solid #3b82f6;
+  background-color: #1e293b;
+  color: white;
+  font-size: 14px;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3); /* Glowing effect */
+}
+
+.getStartedBtn {
+  background: linear-gradient(90deg, #3b82f6, #5865F2); /* Gradient */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%;
+  font-weight: 600;
+  box-shadow: 0px 0px 10px rgba(59, 130, 246, 0.5); /* Add a glow */
+}
+
+.orangeBlob {
+  position: absolute;
+  right: -50px; /* Move it more to the right */
+  top: 40%;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(251,146,60,0.5) 0%, rgba(251,146,60,0) 70%);
+  filter: blur(120px);
+  z-index: -1;
+}
