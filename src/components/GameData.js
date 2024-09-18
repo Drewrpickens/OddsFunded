@@ -95,20 +95,16 @@ function GameData() {
                 awayTeam={event.away_team}
                 date="2023-09-17"
                 time="14:20:00"
-                odds={{
-                  pointsSpread: {
-                    home: { spread: '+2.5', price: '-108' },
-                    away: { spread: '-2.5', price: '-112' }
-                  },
-                  totalPoints: {
-                    over: { spread: 'O 48.5', price: '-112' },
-                    under: { spread: 'U 48.5', price: '-108' }
-                  },
-                  moneyLine: {
-                    home: '+114',
-                    away: '-138'
-                  }
-                }}
+                away_team_spread_price={event.away_team_spread_price}
+                away_team_spread={event.away_team_spread}
+                home_team_spread_price={event.home_team_spread_price}
+                home_team_spread={event.home_team_spread}
+                home_team_ml_price={event.home_team_ml_price}
+                away_team_ml_price={event.away_team_ml_price}
+                over_point={event.over_point}
+                under_point={event.under_point}
+                over_price={event.over_price}
+                under_price={event.under_price}
               />
             ))}
           </div>

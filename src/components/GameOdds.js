@@ -1,8 +1,15 @@
 import React from 'react';
 import styles from './GameOdds.module.css';
-import { buffalo, mia } from './../imagerepository/imagerepository';
+import { teamLogoMap } from './../imagerepository/imagerepository';
 
-const GameOdds = ({ homeTeam, awayTeam, date, time, odds, isLive }) => {
+const GameOdds = ({ homeTeam, awayTeam, date, time, isLive, away_team_spread, home_team_spread, away_team_spread_price, home_team_spread_price,
+  home_team_ml_price,
+  away_team_ml_price,
+  over_point,
+  over_price,
+  under_point,
+  under_price,
+ }) => {
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { month: 'numeric', day: 'numeric' });
@@ -13,12 +20,16 @@ const GameOdds = ({ homeTeam, awayTeam, date, time, odds, isLive }) => {
     return date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
   };
 
+  const getTeamLogo = (teamName) => {
+    return teamLogoMap[teamName] || 'default-logo.png'; 
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.gameInfoContainer}>
         <div className={styles.teamsContainer}>
           <div className={styles.team}>
-            <img src={buffalo} alt={homeTeam} className={styles.teamLogo} />
+            <img src={getTeamLogo(homeTeam)} alt={homeTeam} className={styles.teamLogo} />
             <span className={styles.teamName}>{homeTeam}</span>
           </div>
           <div className={styles.gameTime}>
@@ -27,7 +38,7 @@ const GameOdds = ({ homeTeam, awayTeam, date, time, odds, isLive }) => {
             <div className={styles.time}>{formatTime(time)}</div>
           </div>
           <div className={styles.team}>
-            <img src={mia} alt={awayTeam} className={styles.teamLogo} />
+            <img src={getTeamLogo(awayTeam)} alt={awayTeam} className={styles.teamLogo} />
             <span className={styles.teamName}>{awayTeam}</span>
           </div>
         </div>
@@ -35,30 +46,30 @@ const GameOdds = ({ homeTeam, awayTeam, date, time, odds, isLive }) => {
       <div className={styles.oddsSection}>
         <div className={styles.oddsColumn}>
           <div className={styles.oddBox}>
-            <span className={styles.spread}>{odds.pointsSpread.home.spread}</span>
-            <span className={styles.price}>{odds.pointsSpread.home.price}</span>
+            <span className={styles.spread}>{home_team_spread}</span>
+            <span className={styles.price}>{home_team_spread_price}</span>
           </div>
           <div className={styles.oddBox}>
-            <span className={styles.spread}>{odds.pointsSpread.away.spread}</span>
-            <span className={styles.price}>{odds.pointsSpread.away.price}</span>
-          </div>
-        </div>
-        <div className={styles.oddsColumn}>
-          <div className={styles.oddBox}>
-            <span className={styles.spread}>{odds.totalPoints.over.spread}</span>
-            <span className={styles.price}>{odds.totalPoints.over.price}</span>
-          </div>
-          <div className={styles.oddBox}>
-            <span className={styles.spread}>{odds.totalPoints.under.spread}</span>
-            <span className={styles.price}>{odds.totalPoints.under.price}</span>
+            <span className={styles.spread}>{away_team_spread}</span>
+            <span className={styles.price}>{away_team_spread_price}</span>
           </div>
         </div>
         <div className={styles.oddsColumn}>
           <div className={styles.oddBox}>
-            <span className={styles.price}>{odds.moneyLine.home}</span>
+            <span className={styles.spread}>{over_point}</span>
+            <span className={styles.price}>{over_price}</span>
           </div>
           <div className={styles.oddBox}>
-            <span className={styles.price}>{odds.moneyLine.away}</span>
+            <span className={styles.spread}>{under_point}</span>
+            <span className={styles.price}>{under_price}</span>
+          </div>
+        </div>
+        <div className={styles.oddsColumn}>
+          <div className={styles.oddBox}>
+            <span className={styles.price}>{home_team_ml_price}</span>
+          </div>
+          <div className={styles.oddBox}>
+            <span className={styles.price}>{away_team_ml_price}</span>
           </div>
         </div>
       </div>

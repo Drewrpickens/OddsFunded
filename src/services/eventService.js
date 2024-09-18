@@ -4,7 +4,7 @@ export const eventService = {
   async getEvents() {
     console.log('Fetching events...');
     const { data, error } = await supabase
-      .from('gamedata')
+      .from('eventdata')
       .select('*')
       .order('commence_time', { ascending: true })
 
@@ -18,7 +18,7 @@ export const eventService = {
 
   async getEventById(id) {
     const { data, error } = await supabase
-      .from('gamedata')
+      .from('eventdata')
       .select('*')
       .eq('event_id', id)
       .single()

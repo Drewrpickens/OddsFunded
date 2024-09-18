@@ -1,8 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from './Header.module.css';
 
 function Header() {
+  const navigate = useNavigate();
+
+  const handleAuthRedirect = () => {
+    navigate('/auth');
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -18,7 +24,7 @@ function Header() {
             <li><Link to="/challenges" className={styles.navLink}>Challenges</Link></li>
             <li><Link to="/dashboard" className={styles.navLink}>Dashboard</Link></li>
             <li><Link to="/leaderboard" className={styles.navLink}>Leaderboard</Link></li>
-            <button className={styles.loginbtn}>Log In</button>
+            <button onClick={handleAuthRedirect} className={styles.loginbtn}>Log In</button>
           </ul>
         </nav>
       </div>

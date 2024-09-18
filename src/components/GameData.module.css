@@ -7,14 +7,13 @@
 
 .topBar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 .searchContainer {
-  width: 30%;
+  width: 20%;
 }
 
 .searchInput {
@@ -32,9 +31,10 @@
 }
 
 .columnHeaders {
+  padding-left: 175px;
   display: flex;
   justify-content: space-between;
-  width: 60%;
+  width: 40%;
 }
 
 .columnHeader {
@@ -105,7 +105,7 @@
   background-color: #3a7bc8;
 }
 
-/* You may need to add additional styles for mobile responsiveness */
+
 @media (max-width: 768px) {
   .topBar {
     flex-direction: column;

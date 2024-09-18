@@ -6,6 +6,7 @@ import Challenges from './components/Challenges';
 import Dashboard from './components/Dashboard';
 import Leaderboard from './components/Leaderboard';
 import Footer from './components/Footer';
+import Auth from './components/Auth'; 
 import styles from './App.module.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="/challenges" element={<Challenges />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/leaderboard" element={<Leaderboard />} />
+            <Route path="/auth" element={<Auth />} /> {/* Add the Auth route */}
           </Routes>
         </main>
         <Footer />
